@@ -3,8 +3,8 @@ let sortMode = null;
 
 
 backgrounds = [
-    './photo1.jpg',
-    './Photo2.jpg',
+    'url("./photo1.jpg")',
+    'url("./photo2.jpg")',
 ]
 
 function randomizeBackground() {

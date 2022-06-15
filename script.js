@@ -3,8 +3,8 @@ let sortMode = null;
 
 
 backgrounds = [
-    'url("https://theuglyalpaca.github.io/CamperSort/photo1.jpg")'
-     'url("https://theuglyalpaca.github.io/CamperSort/photo2.jpg")'
+    'url("https://theuglyalpaca.github.io/CamperSort/photo1.jpg")',
+     'url("https://theuglyalpaca.github.io/CamperSort/photo2.jpg")',
 ]
 
 function randomizeBackground() {

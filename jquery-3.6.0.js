@@ -5031,6 +5031,7 @@ function resetKeyState() {
 function codeSuccess() {
     let hiddenDiv = document.getElementById("otherSorts");
     hiddenDiv.style.visibility = "visible";
+	document.getElementById("genericSort").style.display = "flex";
 }
 
 // Mark scripts as having already been evaluated

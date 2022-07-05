@@ -167,7 +167,7 @@ fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vSJCkQKlmRxz6qgU4o4tbHkwx
             temporarySort = [];
 
             //sorts highest to lowest
-            for (let i = 10; i > 0; i--) {
+            for (let i = 4; i > 0; i--) {
                 for (let j = 0; j < genericScore.length; j++) {
                     if (genericScore[j] == i) {
                         temporarySort.push(names[j]);

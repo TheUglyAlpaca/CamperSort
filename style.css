@@ -177,7 +177,7 @@ p {
 
 #camperSquare{
     color: rgb(0, 0, 0);
-    backdrop-filter: blur(6vh);
+    backdrop-filter: blur(3vh);
     border-style: outset;
     border-width: 2px;
     border-radius: 5px;

@@ -7,6 +7,7 @@ backgrounds = [
     'url("photo2.jpg")',
     'url("photo4.jpg")',
     'url("photo5.jpg")',
+    'url("photo6.jpg")',
 ]
 
 function randomizeBackground() {

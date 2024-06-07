@@ -3,10 +3,10 @@ let sortMode = null;
 
 
 backgrounds = [
-    // 'url("photo1.jpg")',
-    // 'url("photo2.jpg")',
-    // 'url("photo4.jpg")',
-    // 'url("photo5.jpg")',
+    'url("photo1.jpg")',
+    'url("photo2.jpg")',
+    'url("photo4.jpg")',
+    'url("photo5.jpg")',
     'url("photo6.jpg")',
 ]
 

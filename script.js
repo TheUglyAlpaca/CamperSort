@@ -104,6 +104,35 @@ fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vSJCkQKlmRxz6qgU4o4tbHkwx
             sortMode = $(this).attr("sortMode");
         })
 
+        $(".deselectrooks").click(function () {
+            // Check the current state of the first rookie checkbox to determine the action
+            let shouldDeselect = rookies.every(rookie => $(`.camperCheck[camper="${rookie}"]`).is(":checked"));
+        
+            // Toggle the selection state based on the current state
+            rookies.forEach(rookie => {
+                $(`.camperCheck[camper="${rookie}"]`).prop("checked", !shouldDeselect);
+            });
+        
+            // Update the counts after toggling
+            updateNameCounts();
+        });
+        
+        $(".deselectposts").click(function () {
+            // Check the current state of the first post checkbox to determine the action
+            let shouldDeselect = posts.every(post => $(`.camperCheck[camper="${post}"]`).is(":checked"));
+        
+            // Toggle the selection state based on the current state
+            posts.forEach(post => {
+                $(`.camperCheck[camper="${post}"]`).prop("checked", !shouldDeselect);
+            });
+        
+            // Update the counts after toggling
+            updateNameCounts();
+        });
+        
+        
+
+
         //CLICK BUTTON
         $("#createGroupsButton").click(function () {
 

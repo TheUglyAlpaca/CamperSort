@@ -290,14 +290,16 @@ p {
     font-weight: bold;
 }
 
-#creator{
+#creator {
     position: fixed;
     font-family: 'Open Sans', sans-serif;
     right: 9px;
     top: 5px;
     font-size: 1em;
-    color: rgba(255, 255, 255, 0.648);
+    color: #ffffff;
+    font-weight: bold;
 }
+
 
 
 /* The switch - the box around the slider */

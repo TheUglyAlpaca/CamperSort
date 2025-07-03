@@ -2,8 +2,9 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BY6KPBKK16"></script>
+    <!-- Google tag (gtag.js) with SRI -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BY6KPBKK16"
+        integrity="sha384-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" crossorigin="anonymous"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -23,15 +24,29 @@
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap');
     </style>
 
-    <!-- Libraries -->
+    <!-- Libraries with SRI where possible -->
     <script src="https://kit.fontawesome.com/4a2c9ddddd.js" crossorigin="anonymous"></script>
     <script src="./jquery-3.6.0.js"></script>
     <script src="https://unpkg.com/docx@7.1.0/build/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.js"></script>
 
-    <!-- Script Tags -->
+    <!-- Your JS files -->
     <script src="script.js"></script>
     <script src="sortingAlgorithms.js"></script>
+
+    <!--
+    Recommended: On your web server, add Content Security Policy headers to reduce risks:
+
+    Content-Security-Policy: 
+      default-src 'self'; 
+      script-src 'self' https://www.googletagmanager.com https://kit.fontawesome.com https://unpkg.com https://cdnjs.cloudflare.com; 
+      style-src 'self' https://fonts.googleapis.com; 
+      font-src https://fonts.gstatic.com; 
+      img-src 'self' data: https:;
+      connect-src 'self' https://www.google-analytics.com;
+
+    Adjust according to your needs.
+    -->
 </head>
 
 <body>
@@ -50,24 +65,49 @@
         <div style="margin-left: 27px">
             <div id="sortingMethods">
                 <div id="programName">
-                    <p>Name of Program: </p><input type="text" id="name" name="quantity" value="<Program Name>">
+                    <label for="name">Name of Program:</label>
+                    <input type="text" id="name" name="name" value="Program Name" autocomplete="off" />
                 </div>
                 <div id="numGroups">
-                    <p>Number of Groups: </p><input type="number" id="quantity" name="quantity" min="2" max="20">
+                    <label for="quantity">Number of Groups:</label>
+                    <input type="number" id="quantity" name="quantity" min="2" max="20" />
                 </div>
                 <div id="sortingMethod">
-                    <p>Sorting Method: </p>
+                    <p>Sorting Method:</p>
                 </div>
-                <div><button title="Randomly sorts campers into groups." class="sortBtn" sortMode="trueRandom">True
-                        Random</button></div>
-                <div><button title="Sorts campers into groups so that Rookies and Posts are evenly distributed."
-                        class="sortBtn" sortMode="evenRookiePostSort">Even Rookie/Post</button></div>
-                <div><button title="Sorts campers into groups so that genders are evenly distributed." class="sortBtn"
-                        sortMode="evenGendersSort">Even Genders</button></div>
-                <div><button title="Deselects all rookies" ." class="deselectrooks">Deselect Rookies</button></div>
-                <div><button title="Deselects all posts" ." class="deselectposts">Deselect Posts</button></div>
+                <div>
+                    <button title="Randomly sorts campers into groups." class="sortBtn" sortMode="trueRandom" type="button">
+                        True Random
+                    </button>
+                </div>
+                <div>
+                    <button title="Sorts campers into groups so that Rookies and Posts are evenly distributed."
+                        class="sortBtn" sortMode="evenRookiePostSort" type="button">
+                        Even Rookie/Post
+                    </button>
+                </div>
+                <div>
+                    <button title="Sorts campers into groups so that genders are evenly distributed." class="sortBtn"
+                        sortMode="evenGendersSort" type="button">
+                        Even Genders
+                    </button>
+                </div>
+                <div>
+                    <button title="Deselects all rookies" class="deselectrooks" type="button">
+                        Deselect Rookies
+                    </button>
+                </div>
+                <div>
+                    <button title="Deselects all posts" class="deselectposts" type="button">
+                        Deselect Posts
+                    </button>
+                </div>
                 <div id="otherSorts">
-                    <div><button class="sortBtn" sortMode="genericSort" id="genericSort">Athletic Sort</button></div>
+                    <div>
+                        <button class="sortBtn" sortMode="genericSort" id="genericSort" type="button">
+                            Athletic Sort
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -78,8 +118,7 @@
     </div>
 
     <p id="creator">© 2025 Robbie Tylman. All rights reserved.</p>
-    <div id="importantButtons"><button id="createGroupsButton">Create Groups!</button></div>
-
+    <div id="importantButtons"><button id="createGroupsButton" type="button">Create Groups!</button></div>
 
 </body>
 

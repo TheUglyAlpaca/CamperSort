@@ -9,6 +9,8 @@ html {
     align-content: flex-start;
     justify-content: flex-start;
     align-items: flex-start;
+    width: 100vw; /* ensure full viewport width */
+    box-sizing: border-box;
 }
 
 #camperlist {
@@ -20,7 +22,8 @@ html {
     font-weight: 400;
     outline: 1px solid;
     display: flex;
-    width: 250px;
+    width: 250px; /* fixed width */
+    flex-shrink: 0; /* prevent shrinking */
     flex-direction: column;
     overflow-y: auto;
     overflow-x: auto;
@@ -41,25 +44,24 @@ html {
     font-size: 1.1em;
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
-    margin: 8px auto 0 auto;   /* center horizontally, margin-top 8px */
-    text-align: center;        /* center text inside */
+    margin: 8px auto 0 auto;
+    text-align: center;
     line-height: 1.6em;
-    width: fit-content;        /* shrink to content width */
+    width: fit-content;
 }
 
 #ratio {
     position: relative;
-    margin: 4px auto 0 auto;   /* small top margin, horizontally centered */
+    margin: 4px auto 0 auto;
     text-align: center;
     width: fit-content;
 }
-
 
 /* Consistent spacing and styling for option buttons */
 .sortBtn,
 .deselectrooks,
 .deselectposts {
-    margin: 20px 0; /* 20px top & bottom */
+    margin: 20px 0;
     font-family: 'Open Sans', sans-serif;
     border-radius: 5px;
     cursor: pointer;
@@ -131,14 +133,14 @@ html {
 
 #name {
     width: 100%;
-    box-sizing: border-box;  /* includes padding and border in the width */
+    box-sizing: border-box;
     background-color: rgba(185, 185, 185, 0.267);
     font-size: .08em;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.8);
     margin-top: 12px;
     margin-bottom: 20px;
-    padding: 6px 10px;       /* optional for nice inner spacing */
+    padding: 6px 10px;
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -178,7 +180,7 @@ p {
 }
 
 #programName label {
-    font-size: 1em;  
+    font-size: 1em;
     font-weight: 700;
     color: white;
 }
@@ -186,11 +188,10 @@ p {
 #programName input {
     font-size: 1.5em;
     font-weight: 400;
-    margin-top: 20px;    /* add space above */
+    margin-top: 20px;
     margin-bottom: 2px;
     color: rgba(255, 255, 255, 0.6);
 }
-
 
 #sortingMethods {
     margin-top: 15px;
@@ -206,7 +207,6 @@ p {
 }
 
 #sortedCampers {
-    display: none;
     position: relative;
     background-color: rgba(223, 223, 223, 0.747);
     border-radius: 4px;
@@ -219,7 +219,10 @@ p {
     overflow-x: auto;
     max-height: calc(100vh - 130px);
     margin-top: 50px;
-    margin-right: 20px;
+    margin-left: 10px;
+    flex-grow: 1;       /* take all remaining space */
+    max-width: calc(100vw - 270px); /* prevent overflow: 100vw minus camperlist width + margin */
+    box-sizing: border-box;
 }
 
 #downloadButton {
@@ -412,13 +415,11 @@ body {
       min-height: 100vh;
       margin: 0;
       padding: 0;
-    
   
-    [style*="margin-left: 27px"] {
-      margin-left: 0 !important;
+      [style*="margin-left: 27px"] {
+        margin-left: 0 !important;
+      }
     }
-  }
-  
   
     #main {
       width: 100%;
@@ -524,7 +525,7 @@ body {
 
     #createGroupsButton {
         position: fixed;
-        bottom: 30px;       /* increase bottom spacing */
+        bottom: 30px;
         left: 10px;
         right: 10px;
         width: auto;
@@ -535,8 +536,7 @@ body {
         cursor: pointer;
         transform: none;
     }
-    
-
+  
     #sortingMethod {
       font-size: 1.6em;
       margin: 10px 0;
@@ -567,5 +567,4 @@ body {
       padding: 4px;
       margin: 4px 0;
     }
-  }
-  
+}

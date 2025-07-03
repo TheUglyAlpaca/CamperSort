@@ -407,18 +407,165 @@ body {
     backdrop-filter: blur(0.35vh);
 }
 
-@media (max-width: 950px) {
-    #sortedCampers {
-        display: none;
-        visibility: hidden;
+@media (max-width: 600px) {
+    html, body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    
+  
+    [style*="margin-left: 27px"] {
+      margin-left: 0 !important;
     }
-
+  }
+  
+  
+    #main {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      background-color: rgba(223, 223, 223, 0.747);
+      padding: 10px 0;
+    }
+  
+    #name {
+      order: -2;
+      font-size: 0.9em;
+      width: 90vw;
+      margin: 10px 0;
+      padding: 6px 10px;
+      box-sizing: border-box;
+      display: block;
+      text-align: center;
+    }
+  
+    #programName {
+      order: -1;
+      font-size: 1.4em;
+      width: 90vw;
+      margin: 10px 0;
+      text-align: center;
+    }
+  
+    #programName label,
+    #programName input {
+      margin: 5px 0;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+    }
+  
+    #programName input {
+      font-size: 1.2em;
+      padding: 6px 10px;
+    }
+  
+    #camperlist {
+      width: 90vw;
+      max-height: 30vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      font-size: 0.85em;
+      margin: 10px 0;
+      padding: 5px;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+  
+    #selectionStats,
+    #ratio {
+      display: none;
+    }
+  
+    .sortBtn,
+    .deselectrooks,
+    .deselectposts {
+      width: 90vw;
+      font-size: 1em;
+      margin: 10px 0;
+      padding: 8px;
+      text-align: center;
+      display: block;
+      box-sizing: border-box;
+    }
+  
+    #quantity {
+      font-size: 0.9em;
+      margin: 10px 0;
+      width: auto;
+    }
+  
+    #sortedCampers {
+      width: 90vw;
+      max-height: 40vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      font-size: 0.85em;
+      margin: 10px 0;
+      border-radius: 4px;
+    }
+  
+    #downloadButton,
+    #createGroupsButton {
+      position: fixed;
+      bottom: 15px;
+      font-size: 1.4em;
+      padding: 6px 10px;
+      border-radius: 13px;
+      white-space: nowrap;
+    }
+  
     #downloadButton {
-        font-size: 1.8em;
-        right: 225px;
+      right: 10px;
     }
 
     #createGroupsButton {
-        font-size: 1.8em;
+        position: fixed;
+        bottom: 30px;       /* increase bottom spacing */
+        left: 10px;
+        right: 10px;
+        width: auto;
+        font-size: 1.4em;
+        padding: 6px 10px;
+        border-radius: 13px;
+        white-space: nowrap;
+        cursor: pointer;
+        transform: none;
     }
-}
+    
+
+    #sortingMethod {
+      font-size: 1.6em;
+      margin: 10px 0;
+      text-align: center;
+    }
+  
+    #numGroups {
+      font-size: 1.6em;
+      margin: 10px 0;
+      text-align: center;
+    }
+  
+    #creator {
+      font-size: 0.8em;
+      text-align: center;
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .camper {
+      font-size: 0.9em;
+      justify-content: space-between;
+      padding: 4px 0;
+    }
+  
+    #camperSquare {
+      font-size: 0.7em;
+      padding: 4px;
+      margin: 4px 0;
+    }
+  }
+  
